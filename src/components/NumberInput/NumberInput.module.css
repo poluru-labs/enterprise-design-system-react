@@ -1,0 +1,69 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--eds-color-text-muted);
+  cursor: pointer;
+  transition:
+    background-color var(--eds-duration-fast) var(--eds-easing-standard),
+    color var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.stepper:hover:not(:disabled) {
+  background: var(--eds-color-ink-100);
+  color: var(--eds-color-text);
+}
+
+.stepper:focus-visible {
+  outline: none;
+  box-shadow: var(--eds-shadow-focus);
+}
+
+.stepper:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.wrapperSm .stepper {
+  width: 2rem;
+}
+
+.wrapperLg .stepper {
+  width: 3rem;
+}
+
+.divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--eds-color-border);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  appearance: textfield;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}

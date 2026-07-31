@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--eds-space-3);
+}
+
+.value {
+  font-size: var(--eds-font-size-sm);
+  font-weight: var(--eds-font-weight-semibold);
+  color: var(--eds-color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.range {
+  width: 100%;
+  margin: var(--eds-space-2) 0 0;
+  accent-color: var(--eds-color-primary);
+  cursor: pointer;
+}
+
+.range:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.range:focus-visible {
+  outline: none;
+}
+
+.range:focus-visible::-webkit-slider-thumb {
+  box-shadow: var(--eds-shadow-focus);
+}

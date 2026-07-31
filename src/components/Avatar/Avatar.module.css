@@ -1,0 +1,43 @@
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--eds-radius-full);
+  background: var(--eds-color-brand-100);
+  color: var(--eds-color-brand-800);
+  font-weight: var(--eds-font-weight-semibold);
+  letter-spacing: 0.02em;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.sm {
+  width: 2rem;
+  height: 2rem;
+  font-size: var(--eds-font-size-xs);
+}
+
+.md {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: var(--eds-font-size-sm);
+}
+
+.lg {
+  width: 3rem;
+  height: 3rem;
+  font-size: var(--eds-font-size-md);
+}
+
+.xl {
+  width: 4rem;
+  height: 4rem;
+  font-size: var(--eds-font-size-lg);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

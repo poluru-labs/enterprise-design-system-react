@@ -1,0 +1,77 @@
+import { Meta, Source } from '@storybook/blocks';
+
+<Meta title="Introduction" />
+
+<div className="eds-docs">
+
+# Enterprise Design System (React)
+
+A production-ready **React** component library with shared design tokens, ThemeProvider, ToastProvider, Storybook documentation, and accessibility tooling.
+
+Built for enterprise product teams that need consistent UI with React idioms.
+
+## Author
+
+| | |
+| --- | --- |
+| **Name** | [Subrahmanyam Poluru](https://polurus.com) |
+| **Organization** | Poluru Labs |
+| **Package** | [`@poluru-labs/enterprise-design-system-react`](https://www.npmjs.com/package/@poluru-labs/enterprise-design-system-react) |
+| **Portfolio** | [polurus.com](https://polurus.com) |
+| **LinkedIn** | [linkedin.com/in/polurus](https://www.linkedin.com/in/polurus/) |
+| **Stack** | React · TypeScript · Vite · Storybook · Jest |
+
+## Quick start
+
+<Source
+  language="bash"
+  code={`npm install @poluru-labs/enterprise-design-system-react`}
+/>
+
+<Source
+  language="tsx"
+  code={`import {
+  Button,
+  ThemeProvider,
+  ToastProvider,
+  showToast,
+} from '@poluru-labs/enterprise-design-system-react';
+import '@poluru-labs/enterprise-design-system-react/tokens.css';
+
+export function App() {
+  return (
+    <ThemeProvider defaultTheme="light">
+      <ToastProvider>
+        <Button onClick={() => showToast({ title: 'Saved', variant: 'success' })}>
+          Save
+        </Button>
+      </ToastProvider>
+    </ThemeProvider>
+  );
+}`}
+/>
+
+## What’s included
+
+- **Tokens** — color, typography, spacing, radius, elevation, motion
+- **Components** — buttons, forms, overlays, data display, and more
+- **Theme** — `ThemeProvider` / `useTheme` (light + dark)
+- **Toasts** — `ToastProvider` / `useToast` / `showToast`
+- **Storybook** — Controls, Docs, a11y checks, themes
+- **Tests** — Jest + Testing Library
+
+## Accessibility
+
+- Labelled controls and ARIA where needed
+- Keyboard support for interactive patterns
+- Focus-visible styles via design tokens
+- Storybook Accessibility addon on every story
+
+## Design principles
+
+1. **Clean over clever** — restrained surfaces, clear hierarchy  
+2. **Token-first** — components consume CSS variables  
+3. **Accessible by default** — focus, keyboard, ARIA  
+4. **React-native APIs** — controlled props and standard event handlers  
+
+</div>

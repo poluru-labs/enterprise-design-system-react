@@ -1,0 +1,28 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(var(--eds-dl-columns, 1), 1fr);
+  gap: var(--eds-space-3) var(--eds-space-6);
+  margin: 0;
+}
+
+.compact {
+  gap: var(--eds-space-2) var(--eds-space-4);
+}
+
+.term {
+  margin: 0;
+  font-size: var(--eds-font-size-sm);
+  font-weight: var(--eds-font-weight-semibold);
+  color: var(--eds-color-text-muted);
+}
+
+.description {
+  margin: 0;
+  font-size: var(--eds-font-size-md);
+  color: var(--eds-color-text);
+  line-height: var(--eds-line-height-relaxed);
+}
+
+.slotted {
+  grid-template-columns: max-content 1fr;
+}

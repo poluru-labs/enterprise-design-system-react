@@ -1,0 +1,100 @@
+.root {
+  display: inline-flex;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--eds-space-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.radioDisabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.dotWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.125rem;
+  border: 1px solid var(--eds-color-border-strong);
+  border-radius: 50%;
+  background: var(--eds-color-surface);
+  transition:
+    border-color var(--eds-duration-fast) var(--eds-easing-standard),
+    box-shadow var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.input:focus-visible + .dotWrap {
+  box-shadow: var(--eds-shadow-focus);
+}
+
+.input:checked + .dotWrap {
+  border-color: var(--eds-color-primary);
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--eds-color-primary);
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity var(--eds-duration-fast) var(--eds-easing-standard),
+    transform var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.input:checked + .dotWrap .dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.labelText {
+  font-size: var(--eds-font-size-md);
+  line-height: var(--eds-line-height-normal);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eds-space-3);
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.groupHorizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--eds-space-4);
+}
+
+.groupLabel {
+  font-size: var(--eds-font-size-sm);
+  font-weight: var(--eds-font-weight-semibold);
+  color: var(--eds-color-text);
+  margin-bottom: var(--eds-space-1);
+  padding: 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: inherit;
+  gap: inherit;
+}

@@ -1,0 +1,11 @@
+.horizontal { display: flex; align-items: center; gap: var(--eds-space-3); width: 100%; }
+.horizontal::before, .horizontal::after { content: ''; flex: 1; height: 1px; background: var(--eds-color-border); }
+.label { font-size: var(--eds-font-size-xs); color: var(--eds-color-text-muted); white-space: nowrap; }
+.line { border: 0; border-top: 1px solid var(--eds-color-border); margin: 0; width: 100%; }
+.vertical { display: inline-block; width: 1px; min-height: 1.5rem; background: var(--eds-color-border); }
+.spacingSmH { margin-block: var(--eds-space-2); }
+.spacingMdH { margin-block: var(--eds-space-4); }
+.spacingLgH { margin-block: var(--eds-space-6); }
+.spacingSmV { margin-inline: var(--eds-space-2); }
+.spacingMdV { margin-inline: var(--eds-space-4); }
+.spacingLgV { margin-inline: var(--eds-space-6); }

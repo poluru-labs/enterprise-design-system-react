@@ -1,0 +1,102 @@
+.root {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  display: inline-flex;
+}
+
+.triggerButton {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: help;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1100;
+  max-width: 16rem;
+  padding: var(--eds-space-2) var(--eds-space-3);
+  border-radius: var(--eds-radius-sm);
+  background: var(--eds-color-ink-900);
+  color: var(--eds-color-text-inverse);
+  font-size: var(--eds-font-size-sm);
+  font-weight: var(--eds-font-weight-medium);
+  line-height: var(--eds-line-height-normal);
+  box-shadow: var(--eds-shadow-md);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--eds-duration-fast) var(--eds-easing-standard),
+    visibility var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.placementTop {
+  bottom: calc(100% + var(--eds-space-2));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.placementBottom {
+  top: calc(100% + var(--eds-space-2));
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.placementLeft {
+  right: calc(100% + var(--eds-space-2));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.placementRight {
+  left: calc(100% + var(--eds-space-2));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  border: 5px solid transparent;
+}
+
+.placementTop::after {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: var(--eds-color-ink-900);
+}
+
+.placementBottom::after {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-color: var(--eds-color-ink-900);
+}
+
+.placementLeft::after {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left-color: var(--eds-color-ink-900);
+}
+
+.placementRight::after {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right-color: var(--eds-color-ink-900);
+}

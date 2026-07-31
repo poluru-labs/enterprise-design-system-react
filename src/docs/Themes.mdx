@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Foundations/Themes" />
+
+# Themes
+
+The design system ships a **light** default and a **dark** theme.
+
+## Storybook
+
+Use the toolbar **Theme** switcher (themes addon) to toggle `light` / `dark`.  
+Dark mode applies the `eds-theme-dark` class on `html`, `body`, and the story root so token aliases update in the canvas.
+
+## In your app
+
+```tsx
+import { ThemeProvider } from '@poluru-labs/enterprise-design-system-react';
+
+<ThemeProvider defaultTheme="dark">{/* app */}</ThemeProvider>
+```
+
+Or toggle the class yourself:
+
+```html
+<html class="eds-theme-dark">
+```
+
+```js
+document.documentElement.classList.toggle('eds-theme-dark', prefersDark);
+```
+
+Dark theme remaps semantic aliases (`--eds-color-bg`, `--eds-color-surface`, `--eds-color-text`, shadows, focus) while keeping the brand scale.

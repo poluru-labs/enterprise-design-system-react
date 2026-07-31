@@ -1,0 +1,6 @@
+.root { display: block; width: 100%; }
+.header { display: flex; justify-content: space-between; margin-bottom: var(--eds-space-2); font-size: var(--eds-font-size-sm); color: var(--eds-color-text); }
+.track { overflow: hidden; height: 0.5rem; border-radius: var(--eds-radius-full); background: var(--eds-color-ink-100); }
+.fill { height: 100%; border-radius: var(--eds-radius-full); background: var(--eds-color-primary); transition: width var(--eds-duration-normal) var(--eds-easing-standard); }
+.indeterminate { width: 40%; animation: indeterminate 1.2s ease-in-out infinite; }
+@keyframes indeterminate { 0% { transform: translateX(-100%); } 100% { transform: translateX(250%); } }

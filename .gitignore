@@ -141,3 +141,10 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Storybook
+*storybook.log
+storybook-static
+
+# Local
+.DS_Store

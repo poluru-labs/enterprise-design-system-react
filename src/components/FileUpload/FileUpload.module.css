@@ -1,0 +1,109 @@
+.field {
+  display: block;
+  width: 100%;
+}
+
+.label {
+  display: block;
+  margin-bottom: var(--eds-space-2);
+  font-size: var(--eds-font-size-sm);
+  font-weight: var(--eds-font-weight-semibold);
+  color: var(--eds-color-text);
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--eds-space-2);
+  min-height: 8rem;
+  padding: var(--eds-space-5);
+  border: 1px dashed var(--eds-color-border-strong);
+  border-radius: var(--eds-radius-lg);
+  background: var(--eds-color-surface);
+  color: var(--eds-color-text-muted);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color var(--eds-duration-fast) var(--eds-easing-standard),
+    background-color var(--eds-duration-fast) var(--eds-easing-standard),
+    box-shadow var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.dropzone:hover:not(.disabled) {
+  border-color: var(--eds-color-primary);
+  background: var(--eds-color-brand-50);
+}
+
+.dragOver {
+  border-color: var(--eds-color-primary);
+  background: var(--eds-color-brand-50);
+  box-shadow: var(--eds-shadow-focus);
+}
+
+.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--eds-color-ink-50);
+}
+
+.dropzone:focus-visible {
+  outline: none;
+  box-shadow: var(--eds-shadow-focus);
+}
+
+.icon {
+  display: inline-flex;
+  color: var(--eds-color-primary);
+  line-height: 0;
+}
+
+.prompt {
+  margin: 0;
+  font-size: var(--eds-font-size-sm);
+  color: var(--eds-color-text);
+}
+
+.promptSubtle {
+  margin: 0;
+  font-size: var(--eds-font-size-xs);
+  color: var(--eds-color-text-subtle);
+}
+
+.fileInput {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hint {
+  display: block;
+  margin-top: var(--eds-space-2);
+  font-size: var(--eds-font-size-xs);
+  color: var(--eds-color-text-subtle);
+}
+
+.fileList {
+  margin: var(--eds-space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  gap: var(--eds-space-2);
+  padding: var(--eds-space-2) var(--eds-space-3);
+  border: 1px solid var(--eds-color-border);
+  border-radius: var(--eds-radius-md);
+  background: var(--eds-color-ink-50);
+  font-size: var(--eds-font-size-sm);
+  color: var(--eds-color-text);
+}
+
+.fileItem + .fileItem {
+  margin-top: var(--eds-space-2);
+}

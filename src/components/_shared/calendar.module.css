@@ -1,0 +1,133 @@
+.popover {
+  position: absolute;
+  top: calc(100% + var(--eds-space-1));
+  left: 0;
+  z-index: 200;
+  min-width: 17.5rem;
+  padding: var(--eds-space-3);
+  background: var(--eds-color-surface);
+  border: 1px solid var(--eds-color-border);
+  border-radius: var(--eds-radius-lg);
+  box-shadow: var(--eds-shadow-md);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--eds-space-2);
+  margin-bottom: var(--eds-space-3);
+}
+
+.monthLabel {
+  flex: 1;
+  text-align: center;
+  font-size: var(--eds-font-size-sm);
+  font-weight: var(--eds-font-weight-semibold);
+  color: var(--eds-color-text);
+}
+
+.navButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--eds-radius-md);
+  background: transparent;
+  color: var(--eds-color-text-muted);
+  cursor: pointer;
+  transition:
+    background-color var(--eds-duration-fast) var(--eds-easing-standard),
+    color var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.navButton:hover:not(:disabled) {
+  background: var(--eds-color-ink-100);
+  color: var(--eds-color-text);
+}
+
+.navButton:focus-visible {
+  outline: none;
+  box-shadow: var(--eds-shadow-focus);
+}
+
+.navButton:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.weekdays,
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--eds-space-1);
+}
+
+.weekday {
+  display: grid;
+  place-items: center;
+  height: 1.75rem;
+  font-size: var(--eds-font-size-xs);
+  font-weight: var(--eds-font-weight-semibold);
+  color: var(--eds-color-text-subtle);
+}
+
+.day {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--eds-radius-md);
+  background: transparent;
+  color: var(--eds-color-text);
+  font: inherit;
+  font-size: var(--eds-font-size-sm);
+  cursor: pointer;
+  transition:
+    background-color var(--eds-duration-fast) var(--eds-easing-standard),
+    color var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.day:hover:not(:disabled) {
+  background: var(--eds-color-brand-50);
+}
+
+.day:focus-visible {
+  outline: none;
+  box-shadow: var(--eds-shadow-focus);
+}
+
+.outside {
+  color: var(--eds-color-text-subtle);
+}
+
+.today:not(.selected) {
+  box-shadow: inset 0 0 0 1px var(--eds-color-primary);
+}
+
+.selected {
+  background: var(--eds-color-primary);
+  color: var(--eds-color-text-inverse);
+}
+
+.inRange:not(.selected) {
+  background: var(--eds-color-brand-50);
+}
+
+.rangeStart,
+.rangeEnd {
+  background: var(--eds-color-primary);
+  color: var(--eds-color-text-inverse);
+}
+
+.day:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

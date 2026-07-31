@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/poluru-labs/enterprise-design-system-react/blob/main/SECURITY.md
+    about: Report security issues privately — do not open a public issue.
+  - name: Author — Subrahmanyam Poluru
+    url: https://polurus.com
+    about: Portfolio and contact for Poluru Labs.
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/polurus/
+    about: Connect with Subrahmanyam Poluru on LinkedIn.
+  - name: Support guide
+    url: https://github.com/poluru-labs/enterprise-design-system-react/blob/main/SUPPORT.md
+    about: How to get help with this package.

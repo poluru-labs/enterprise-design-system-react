@@ -1,0 +1,7 @@
+.root { display: inline-flex; align-items: center; justify-content: center; position: relative; }
+.svg { transform: rotate(-90deg); }
+.track { stroke: var(--eds-color-ink-100); fill: none; }
+.fill { stroke: var(--eds-color-primary); fill: none; stroke-linecap: round; transition: stroke-dashoffset var(--eds-duration-normal) var(--eds-easing-standard); }
+.indeterminate { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(270deg); } }
+.value { position: absolute; font-size: var(--eds-font-size-xs); font-weight: var(--eds-font-weight-semibold); color: var(--eds-color-text); }

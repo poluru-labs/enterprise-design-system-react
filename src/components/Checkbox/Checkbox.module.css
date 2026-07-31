@@ -1,0 +1,71 @@
+.root {
+  display: inline-flex;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--eds-space-2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkboxDisabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.125rem;
+  border: 1px solid var(--eds-color-border-strong);
+  border-radius: var(--eds-radius-sm);
+  background: var(--eds-color-surface);
+  transition:
+    background-color var(--eds-duration-fast) var(--eds-easing-standard),
+    border-color var(--eds-duration-fast) var(--eds-easing-standard),
+    box-shadow var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.input:focus-visible + .box {
+  box-shadow: var(--eds-shadow-focus);
+}
+
+.input:checked + .box,
+.input:indeterminate + .box {
+  background: var(--eds-color-primary);
+  border-color: var(--eds-color-primary);
+  color: var(--eds-color-text-inverse);
+}
+
+.mark {
+  width: 0.75rem;
+  height: 0.75rem;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.input:checked + .box .markCheck,
+.input:indeterminate + .box .markIndeterminate {
+  opacity: 1;
+}
+
+.labelText {
+  font-size: var(--eds-font-size-md);
+  line-height: var(--eds-line-height-normal);
+  color: var(--eds-color-text);
+}

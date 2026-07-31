@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 var(--eds-space-3);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+
+.input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.input:hover:not(:disabled)::-webkit-calendar-picker-indicator {
+  opacity: 1;
+}
+
+.input:disabled::-webkit-calendar-picker-indicator {
+  cursor: not-allowed;
+  opacity: 0.35;
+}

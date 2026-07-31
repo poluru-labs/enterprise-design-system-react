@@ -1,0 +1,42 @@
+.inputs {
+  display: flex;
+  align-items: center;
+  gap: var(--eds-space-2);
+}
+
+.cell {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--eds-color-border-strong);
+  border-radius: var(--eds-radius-md);
+  background: var(--eds-color-surface);
+  color: var(--eds-color-text);
+  font: inherit;
+  font-size: var(--eds-font-size-lg);
+  font-weight: var(--eds-font-weight-semibold);
+  text-align: center;
+  transition:
+    border-color var(--eds-duration-fast) var(--eds-easing-standard),
+    box-shadow var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.cell:hover:not(:disabled) {
+  border-color: var(--eds-color-ink-400);
+}
+
+.cell:focus {
+  outline: none;
+  border-color: var(--eds-color-primary);
+  box-shadow: var(--eds-shadow-focus);
+}
+
+.cell:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--eds-color-ink-50);
+}
+
+.cellInvalid {
+  border-color: var(--eds-color-danger-600);
+}

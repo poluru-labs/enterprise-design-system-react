@@ -1,0 +1,65 @@
+.root {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.trigger {
+  position: relative;
+  cursor: pointer;
+}
+
+.triggerDisabled {
+  cursor: not-allowed;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  cursor: inherit;
+}
+
+.input::placeholder {
+  color: var(--eds-color-text-subtle);
+}
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--eds-radius-sm);
+  background: transparent;
+  color: var(--eds-color-text-muted);
+  cursor: pointer;
+  transition:
+    background-color var(--eds-duration-fast) var(--eds-easing-standard),
+    color var(--eds-duration-fast) var(--eds-easing-standard);
+}
+
+.iconButton:hover:not(:disabled) {
+  background: var(--eds-color-ink-100);
+  color: var(--eds-color-text);
+}
+
+.iconButton:focus-visible {
+  outline: none;
+  box-shadow: var(--eds-shadow-focus);
+}
+
+.iconButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}

@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 5rem;
+  padding: var(--eds-space-3);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 5rem;
+  line-height: var(--eds-line-height-normal);
+}
+
+.resizeNone {
+  resize: none;
+}
+
+.resizeVertical {
+  resize: vertical;
+}
+
+.resizeBoth {
+  resize: both;
+}
