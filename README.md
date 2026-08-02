@@ -8,6 +8,15 @@ Token-driven enterprise UI library built with **React**, **TypeScript**, **Jest*
 [![CI](https://github.com/poluru-labs/enterprise-design-system-react/actions/workflows/ci.yml/badge.svg)](https://github.com/poluru-labs/enterprise-design-system-react/actions/workflows/ci.yml)
 [![Demo](https://img.shields.io/badge/demo-Storybook-ff4785.svg)](https://polurus.com/enterprise-design-system-react/)
 
+## Demo
+
+Live Demo: [enterprise-design-system-react](https://polurus.com/enterprise-design-system-react/)
+
+## Playground
+
+Try it here: [enterprise-design-system-react](https://polurus.com/enterprise-design-system-react/)
+
+
 ## Install
 
 ```bash
@@ -123,7 +132,7 @@ Open http://localhost:6007
 
 ## Author
 
-**[Subrahmanyam Poluru](https://polurus.com)** — Poluru Labs
+**[Subrahmanyam Poluru](https://polurus.com)**  
 
 Design systems architect and product engineer. Builds token-driven component libraries and documentation platforms for enterprise teams.
 
@@ -134,7 +143,7 @@ Design systems architect and product engineer. Builds token-driven component lib
 
 ## License
 
-[MIT](https://github.com/poluru-labs/enterprise-design-system-react/blob/main/LICENSE) © [Subrahmanyam Poluru](https://polurus.com) / Poluru Labs
+[MIT](https://github.com/poluru-labs/enterprise-design-system-react/blob/main/LICENSE) © [Subrahmanyam Poluru](https://polurus.com) / 
 
 See [NOTICE](https://github.com/poluru-labs/enterprise-design-system-react/blob/main/NOTICE) and [AUTHORS](https://github.com/poluru-labs/enterprise-design-system-react/blob/main/AUTHORS).
 
